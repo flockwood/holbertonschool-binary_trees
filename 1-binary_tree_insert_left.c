@@ -5,8 +5,7 @@
  * @parent: Pointer to the node to insert the left-child in
  * @value: Value to store in the new node
  *
- * Return: Pointer to the created node,
- * or NULL on failure or if parent is NULL
+ * Return: Pointer to the created node, or NULL on failure or if parent is NULL
  *
  * Description: If parent already has a left-child,
  * the new node takes its place
@@ -27,8 +26,8 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 	/* If a parent already has a left child, reassign */
 	if (parent->left != NULL)
 	{
-	  new_node->left = parent->left;
-	  parent->left->parent = new_node;
+		new_node->left = parent->left;
+		parent->left->parent = new_node;
 	}
 
 	/* Set the new node as the left child of the parent */
